@@ -1,0 +1,330 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>變數 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="environment.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介紹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="environment.html">
+            
+                <a href="environment.html">
+            
+                    
+                    環境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="variable.html">
+            
+                <a href="variable.html">
+            
+                    
+                    變數
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >變數</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><strong>2-0 &#x8B8A;&#x6578;</strong></p>
+<blockquote>
+<p>Golang&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x6BD4;&#x8F03;&#x7279;&#x5225;&#x4E00;&#x9EDE;&#xFF0C;&#x578B;&#x5225;&#x5BEB;&#x5728;&#x8B8A;&#x6578;&#x5F8C;&#x9762;&#x3002;  </p>
+</blockquote>
+<p>Golang&#x6709;25&#x500B;&#x4FDD;&#x7559;&#x5B57;&#xFF0C;&#x4E0D;&#x80FD;&#x505A;&#x70BA;&#x8B8A;&#x6578;&#x540D;&#x7A31;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#x5217;&#xFF1A;  </p>
+<blockquote>
+<p>break default func interface select
+case defer go map struct
+chan else goto package switch
+const fallthrough if range type
+continue for import return var</p>
+</blockquote>
+<p>&#x4E0B;&#x5217;&#x5E7E;&#x7A2E;&#x662F;&#x9810;&#x5148;&#x5BA3;&#x544A;&#xFF0C;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x5BA3;&#x544A;&#xFF1A;</p>
+<blockquote>
+<p>&#x5E38;&#x6578;&#xFF1A;true false iota nil<br>&#x578B;&#x5225;&#xFF1A;int int8 int16 int32 int64<br>&#x2003;&#x2003;&#x2003;uint uint8 uint16 uint32 uint64<br>&#x2003;&#x2003;&#x2003;float32 float64 complex128 complex64<br>&#x2003;&#x2003;&#x2003;bool byte rune string error<br>&#x51FD;&#x5F0F;&#xFF1A;make len cap new append copy close delete<br>&#x2003;&#x2003;&#x2003;complex real imag panic recover</p>
+</blockquote>
+<p>Golang&#x5E38;&#x898B;&#x6709;&#x56DB;&#x7A2E;&#x5BA3;&#x544A;&#xFF1A;var&#x3001;const&#x3001;type&#x3001;func</p>
+<blockquote>
+<p>var&#x4F5C;&#x70BA;&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x4F7F;&#x7528;&#xFF0C;&#x7D66;&#x5B9A;&#x8B8A;&#x6578;&#x540D;&#x7A31;&#x3002;<br>const&#x4F5C;&#x70BA;&#x5BA3;&#x544A;&#x5E38;&#x6578;&#x4F7F;&#x7528;&#xFF0C;&#x5E38;&#x6578;&#x662F;&#x6307;&#x4E0D;&#x6703;&#x88AB;&#x6539;&#x8B8A;&#x7684;&#x503C;&#x3002;<br>type&#x4F5C;&#x70BA;&#x5BA3;&#x544A;&#x578B;&#x5225;&#x4F7F;&#x7528;&#x3002;<br>func&#x4F5C;&#x70BA;&#x5BA3;&#x544A;&#x51FD;&#x5F0F;&#x4F7F;&#x7528;&#x3002;  </p>
+</blockquote>
+<p>&#x5BA3;&#x544A;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#xFF1A;</p>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;     //&#x53EF;&#x4EE5;&#x5370;&#x51FA;&#x7D50;&#x679C;&#x7684;&#x5957;&#x4EF6;
+    &quot;reflect&quot; //&#x53EF;&#x4EE5;&#x6AA2;&#x67E5;&#x578B;&#x5225;&#x7684;&#x5957;&#x4EF6;
+)
+
+func main() {
+    var name string = &quot;Michael&quot;
+    var i, j, k int                   //&#x578B;&#x5225;&#x9810;&#x671F;&#x662F; int int int
+    var a, b, c = false, 87.87, &quot;wow&quot; //&#x578B;&#x5225;&#x9810;&#x671F;&#x662F; bool float64 string
+    m := 87                           //&#x578B;&#x5225;&#x9810;&#x671F;&#x662F; int  &#x8ACB;&#x898B;2-1&#x8AAA;&#x660E;
+    n := new(int)                     //&#x578B;&#x5225;&#x9810;&#x671F;&#x662F; *int &#x8ACB;&#x898B;2-2&#x8AAA;&#x660E;
+    fmt.Println(&quot;&#x503C;:&quot;, name, &quot;&#x578B;&#x5225;&#xFF1A;&quot;, reflect.TypeOf(name))
+    fmt.Println(&quot;&#x503C;:&quot;, i, j, k, &quot;&#x578B;&#x5225;&#xFF1A;&quot;, reflect.TypeOf(i), reflect.TypeOf(j), reflect.TypeOf(k))
+    fmt.Println(&quot;&#x503C;:&quot;, a, b, c, &quot;&#x578B;&#x5225;&#xFF1A;&quot;, reflect.TypeOf(a), reflect.TypeOf(b), reflect.TypeOf(c))
+    fmt.Println(&quot;&#x503C;:&quot;, m, &quot;&#x578B;&#x5225;&#xFF1A;&quot;, reflect.TypeOf(m))
+    fmt.Println(&quot;&#x503C;:&quot;, n, &quot;&#x578B;&#x5225;&#xFF1A;&quot;, reflect.TypeOf(n))
+
+    type newType string
+    var who newType = &quot;Michael&quot; //&#x578B;&#x5225;&#x9810;&#x671F;&#x662F; string &#x8ACB;&#x898B;2-4&#x8AAA;&#x660E;
+    fmt.Println(&quot;&#x503C;:&quot;, who, &quot;&#x578B;&#x5225;&#xFF1A;&quot;, reflect.TypeOf(who))
+}
+</code></pre><p>&#x7D50;&#x679C;&#xFF1A;</p>
+<pre><font color="#8AE234"><b>$</b></font><b> </b>go run var_01.go
+&#x503C;: Michael &#x578B;&#x5225;&#xFF1A; string
+&#x503C;: 0 0 0 &#x578B;&#x5225;&#xFF1A; int int int
+&#x503C;: false 87.87 wow &#x578B;&#x5225;&#xFF1A; bool float64 string
+&#x503C;: 87 &#x578B;&#x5225;&#xFF1A; int
+&#x503C;: 0xc0000120f8 &#x578B;&#x5225;&#xFF1A; *int
+&#x503C;: Michael &#x578B;&#x5225;&#xFF1A; main.newType
+</pre>
+
+<p><strong>2-1 &#x77ED;&#x8B8A;&#x6578;&#x5BA3;&#x544A;</strong></p>
+<blockquote>
+<p>&#x578B;&#x5225;&#x7531;&#x503C;&#x5B9A;&#x7FA9;&#x3002;</p>
+</blockquote>
+<pre><code>m := 87 //int
+</code></pre><p><strong>2-2 new &#x5EFA;&#x69CB;&#x51FD;&#x5F0F;</strong></p>
+<blockquote>
+<p>&#x8B8A;&#x6578;&#x82E5;&#x662F;&#x7531;new(T)&#x65B9;&#x5F0F;&#x5BA3;&#x544A;&#xFF0C;&#x5176;&#x578B;&#x5225;&#x70BA; <em>T&#x578B;&#x5225;&#xFF0C;&#x5176;&#x503C;&#x70BA; </em>T&#x578B;&#x5225;&#x7684;&#x4F4D;&#x5740;&#x503C;(&#x53EF;&#x53C3;&#x8003;2-3)&#x3002;  </p>
+</blockquote>
+<pre><code>n:=new(int)  //n&#x6307;&#x5411;&#x4E0D;&#x5177;&#x540D;&#x7684;int&#x8B8A;&#x6578;
+</code></pre><p><strong>2-3 &#x6307;&#x6A19;</strong></p>
+<blockquote>
+<p>&#x6307;&#x6A19;&#x662F;&#x8B8A;&#x6578;&#x7684;&#x4F4D;&#x5740;&#xFF0C;&#x6BCF;&#x500B;&#x8B8A;&#x6578;&#x90FD;&#x6703;&#x6709;&#x4F4D;&#x5740;&#xFF0C;&#x4F46;&#x6BCF;&#x500B;&#x503C;&#x53EF;&#x4E0D;&#x4E00;&#x5B9A;&#x6709;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x6539;&#x8B8A;&#x6307;&#x6A19;&#x7684;&#x503C;&#x53BB;&#x6539;&#x8B8A;&#x8B8A;&#x6578;&#x7684;&#x503C;&#x3002;</p>
+</blockquote>
+<pre><code>x:= 10
+y:= &amp;x //y&#x7684;&#x578B;&#x5225;&#x70BA;*int&#x4E14;&#x6307;&#x5411;x&#xFF0C;*int&#x5FF5;&#x505A;point to int
+*y = 20 //x&#x4E5F;&#x6703;&#x70BA;20
+</code></pre><p><strong>2-4 &#x578B;&#x5225;&#x5BA3;&#x544A;</strong> </p>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x7FA9;&#x578B;&#x5225;&#x3002;   </p>
+</blockquote>
+<pre><code>type newType string
+var who newType = &quot;Michael&quot;  // who&#x7684;&#x578B;&#x5225;&#x6703;&#x662F;main.newType
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="environment.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 環境配置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"變數","level":"1.3","depth":1,"previous":{"title":"環境配置","level":"1.2","depth":1,"path":"base/environment.md","ref":"base/environment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/variable.md","mtime":"2018-09-18T13:17:47.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-17T13:04:29.198Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

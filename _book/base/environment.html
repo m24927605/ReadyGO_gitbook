@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="variable.html" />
+    
     
     <link rel="prev" href="../" />
     
@@ -113,6 +115,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3" data-path="variable.html">
+            
+                <a href="variable.html">
+            
+                    
+                    變數
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -158,7 +173,97 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <p><strong>&#x74B0;&#x5883;&#x914D;&#x7F6E;</strong></p>
+<blockquote>
+<p>OS:linux ubuntu 18.04</p>
+</blockquote>
+<p><strong>&#x5B89;&#x88DD;&#x6B65;&#x9A5F;</strong></p>
+<ol>
+<li>&#x5F9E;<a href="https://golang.org/dl/" target="_blank">Golang&#x5B98;&#x7DB2;</a>&#x4E0B;&#x8F09;go1.11.linux-amd64.tar.gz</li>
+<li>&#x81F3;&#x4E0B;&#x8F09;&#x8CC7;&#x6599;&#x593E;&#x89E3;&#x58D3;&#x7E2E;go1.11.linux-amd64.tar.gz&#x5230;/usr/local<pre><font color="#8AE234"><b>$</b></font><b> </b>sudo tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
+</pre></li>
+<li>&#x7DE8;&#x8F2F;.bashrc&#xFF0C;&#x8ABF;&#x6574;&#x74B0;&#x5883;&#x53C3;&#x6578;&#x3002;
+<pre><font color="#8AE234"><b>$</b></font><b> </b>vi ~/.bashrc 
+</pre>
+&#x8ACB;&#x52A0;&#x4E0A;&#x4EE5;&#x4E0B;&#x56DB;&#x5217;&#xFF1A;<pre><code>export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+</code></pre></li>
+<li><p>&#x6709;&#x4F7F;&#x7528;zsh&#x7684;&#x8A71;&#xFF0C;&#x4E5F;&#x8981;&#x7DE8;&#x8F2F;.zshrc
+<pre><font color="#8AE234"><b>$</b></font><b> </b>vi ~/.zshrc 
+</pre>
+&#x8ACB;&#x52A0;&#x4E0A;&#x4EE5;&#x4E0B;&#x56DB;&#x5217;&#xFF1A;</p>
+<pre><code>export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+</code></pre><p>&#x8AAA;&#x660E;&#xFF1A;</p>
+<blockquote>
+<p>&#x7B2C;3&#x9EDE;&#x8207;&#x7B2C;4&#x9EDE;&#x4E2D;&#x7684;GOPATH&#x662F;&#x6307;&#x65E5;&#x5F8C;&#x958B;&#x767C;&#x7684;Golang&#x5C08;&#x6848;&#x7A0B;&#x5F0F;&#x78BC;&#x653E;&#x7F6E;&#x7684;&#x8CC7;&#x6599;&#x593E;&#x4F4D;&#x7F6E;&#xFF08;&#x5DE5;&#x4F5C;&#x8CC7;&#x6599;&#x593E;&#xFF09;&#xFF0C;GOROOT&#x662F;&#x6307;Golang&#x5B89;&#x88DD;&#x7684;&#x8CC7;&#x6599;&#x593E;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>&#x78BA;&#x8A8D;Golang&#x6709;&#x7121;&#x5B89;&#x88DD;&#x6210;&#x529F;&#x3002;</p>
+<pre><font color="#8AE234"><b>$</b></font><b> </b>go version
+go version go1.11 linux/amd64
+</pre></li>
+<li>&#x78BA;&#x8A8D;Golang&#x74B0;&#x5883;&#x8A2D;&#x5B9A;&#x3002;<pre><font color="#8AE234"><b>$</b></font><b> </b>go env
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOCACHE=&quot;/home/michael/.cache/go-build&quot;
+GOEXE=&quot;&quot;
+GOFLAGS=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;linux&quot;
+GOOS=&quot;linux&quot;
+GOPATH=&quot;/home/michael/go&quot;
+GOPROXY=&quot;&quot;
+GORACE=&quot;&quot;
+GOROOT=&quot;/usr/local/go&quot;
+GOTMPDIR=&quot;&quot;
+GOTOOLDIR=&quot;/usr/local/go/pkg/tool/linux_amd64&quot;
+GCCGO=&quot;gccgo&quot;
+CC=&quot;gcc&quot;
+CXX=&quot;g++&quot;
+CGO_ENABLED=&quot;1&quot;
+GOMOD=&quot;&quot;
+CGO_CFLAGS=&quot;-g -O2&quot;
+CGO_CPPFLAGS=&quot;&quot;
+CGO_CXXFLAGS=&quot;-g -O2&quot;
+CGO_FFLAGS=&quot;-g -O2&quot;
+CGO_LDFLAGS=&quot;-g -O2&quot;
+PKG_CONFIG=&quot;pkg-config&quot;
+GOGCCFLAGS=&quot;-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build899480533=/tmp/go-build -gno-record-gcc-switches&quot;
+</pre></li>
+<li>Golang&#x5C08;&#x6848;&#x8CC7;&#x6599;&#x593E;&#x7D50;&#x69CB;&#x8AAA;&#x660E;&#xFF1A;<blockquote>
+<p>&#x8ACB;&#x5148;&#x78BA;&#x8A8D;Golang &#x5DE5;&#x4F5C;&#x8CC7;&#x6599;&#x593E;&#xFF08;GOPATH&#xFF09;&#x5E95;&#x4E0B;&#x6709;&#x7121; bin&#x3001;pkg&#x3001;src &#x8CC7;&#x6599;&#x593E;&#xFF0C;&#x82E5;&#x7121;&#x8ACB;&#x81EA;&#x884C;&#x5275;&#x5EFA;&#xFF0C;&#x8CC7;&#x6599;&#x593E;&#x7684;&#x8AAA;&#x660E;&#x5982;&#x4E0B;&#xFF1A;</p>
+</blockquote>
+</li>
+</ol>
+<p>bin:&#x653E;&#x7F6E;go install&#x751F;&#x6210;&#x7684;&#x6A94;&#x6848;&#x3002;
+pkg:&#x653E;&#x7F6E;go build&#x5F8C;&#x7684;&#x6A94;&#x6848;&#x3002;
+src:&#x958B;&#x767C;&#x5C08;&#x6848;&#x7684;&#x8CC7;&#x6599;&#x593E;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x5BE6;&#x969B;&#x9AD4;&#x9A57;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><font color="#8AE234"><b>$</b></font><b> </b>cd ~ &amp;&amp; go install github.com/m24927605/go_helloworld
+</pre>
+<pre><font color="#8AE234"><b>$</b></font><b> </b>cd ~/go/bin &amp;&amp; ls
+<font color="#8AE234"><b>go_helloworld</b></font>
+</pre>
+&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;terminal&#x4E0B;go_helloworld
+<pre>
+<font color="#8AE234"><b>$</b></font><b> </b>go_helloworld
+Hello World
+</pre>
+
+
+<ol>
+<li>go get&#x4ECB;&#x7D39;<pre><code>go get -v src/github.com/[user name]/[project name]
+</code></pre>&#x8AAA;&#x660E;&#xFF1A;&#x4F7F;&#x7528;go get&#x5176;&#x5BE6;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x4E86;git&#x53BB;&#x62C9;&#x53D6;&#x8CC7;&#x6E90;&#xFF0C;&#x76F8;&#x7576;&#x65BC;&#xFF1A;<pre><code>git clone https://github.com/[user name]/[
+project name]
+</code></pre>&#x5982;&#x679C;&#x9060;&#x7AEF;&#x8CC7;&#x6E90;&#x6709;&#x66F4;&#x65B0;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;-u&#x9032;&#x884C;&#x66F4;&#x65B0;&#x7684;&#x62C9;&#x53D6;&#x3002;<pre><code>go get -v -u src/github.com/[user name]/[project name]
+</code></pre></li>
+</ol>
+
                                 
                                 </section>
                             
@@ -185,10 +290,14 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 介紹">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 介紹">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="variable.html" class="navigation navigation-next " aria-label="Next page: 變數">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -197,7 +306,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"環境配置","level":"1.2","depth":1,"previous":{"title":"介紹","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/environment.md","mtime":"2018-09-10T13:41:45.136Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-12T14:48:13.374Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"環境配置","level":"1.2","depth":1,"next":{"title":"變數","level":"1.3","depth":1,"path":"base/variable.md","ref":"base/variable.md","articles":[]},"previous":{"title":"介紹","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/environment.md","mtime":"2018-09-15T05:52:20.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-17T13:04:29.198Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

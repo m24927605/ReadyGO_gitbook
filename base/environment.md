@@ -76,7 +76,7 @@ src:開發專案的資料夾位置。
 <pre><font color="#8AE234"><b>$</b></font><b> </b>cd ~/go/bin &amp;&amp; ls
 <font color="#8AE234"><b>go_helloworld</b></font>
 </pre>
-而且可以直接在terminal下go_helloworld
+可以直接在terminal下go_helloworld
 <pre>
 <font color="#8AE234"><b>$</b></font><b> </b>go_helloworld
 Hello World
